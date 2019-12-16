@@ -4,7 +4,11 @@
   "description": "## Topics",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "db:update": "knex migrate:latest",
+    "db:undo": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,10 @@
   },
   "homepage": "https://github.com/cjogles/webauth-i-challenge#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "knex": "^0.20.4",
     "sqlite3": "^4.1.1"
   }

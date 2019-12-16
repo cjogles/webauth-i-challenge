@@ -3,7 +3,7 @@ module.exports = {
     client: "sqlite3",
     useNullAsDefault: true,
     connection: {
-      filename: ""
+      filename: "./data/user.db3"
     },
     pool: {
       afterCreate: (conn, done) => {
@@ -11,10 +11,10 @@ module.exports = {
       }
     },
     migrations: {
-      directory: ""
+      directory: "./data/migrations"
     },
     seeds: {
-      directory: ""
+      directory: "./data/seeds"
     }
   }
 }
